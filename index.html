@@ -24,11 +24,56 @@
     </div>
   </div>
 
-  <!-- Cards -->
+  <!-- Modal Popup-->
+  <div class="background-modal">
+    <div class="input-modal">
+      <form action="">
+        <div>
+          <p>NEW BOOK</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-plus" id="close"></i>
+          <p class="close-tooltip">close this window?</p>
+        </div>
 
-  <!-- Add Book -->
+        <div class="line">
+
+        </div>
+
+        <div>
+          <label for="title">Title: </label><br>
+          <input id="title" type="text" placeholder="Book Title">
+        </div>
+
+        <div>
+          <label for="author">Author: </label><br>
+          <input id="author" type="text" placeholder="Author's name">
+        </div>
+
+        <div>
+          <label for="pages">Pages</label><br>
+          <input id="pages" type="text" placeholder="No. of pages">
+        </div>
+
+        <div>
+          <label for="read">Have you read the book?</label><br>
+          <select name="read" id="read">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="button">
+          <button type="button"> Create </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Book Icon -->
   <div class="footer">
-    <i class="fa-solid fa-plus"></i>
+    <i class="fa-solid fa-plus" id="open"></i>
     <p class="footer-tooltip">Add new book...</p>
 
   </div>
