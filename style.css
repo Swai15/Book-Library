@@ -7,7 +7,9 @@
   grid-template-columns: 7fr 1fr;
   height: 100px;
   background: rgb(174, 225, 255);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.384);
+  /* border: 2px solid black; */
+
+  box-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
 
@@ -16,6 +18,7 @@
   grid-template-columns: 50px 150px 1fr;
   margin-top: 10px;
   margin-left: 20px;
+
 }
 
 .header-left i {
@@ -59,7 +62,7 @@
 }
 
 
-.footer i {
+.footer #open {
   position: absolute;
   top: 85vh;
   left: 88vw;
@@ -74,7 +77,7 @@
   opacity: 0.9;
 }
 
-.footer i:hover {
+.footer #open:hover {
   font-size: 60px;
   background: rgba(127, 123, 148, 0.61);
   opacity: 1;
@@ -110,6 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .input-modal {
@@ -118,6 +122,7 @@
   background: white;
   border-radius: 5px;
   position: relative;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
 
 }
 
@@ -196,11 +201,6 @@ form select {
   margin-top: 5px;
 }
 
-
-
-
-
-
 form button {
   background: rgba(99, 133, 146, 0.89);
   color: white;
@@ -211,8 +211,82 @@ form button {
   margin-bottom: 20px;
 }
 
-.button {
+form button:hover {
+  cursor: pointer;
+  background: rgba(67, 98, 110, 0.89);
+}
+
+form .button {
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+/* END OF MODAL */
+
+
+/* MIDDLE SECTION  */
+.container {
+  background: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container .card {
+  background: linear-gradient(to right, rgba(121, 95, 126, 0.336), rgba(93, 173, 247, 0.5));
+  width: 300px;
+  height: 270px;
+  border-radius: 3px;
+  margin: 20px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) 70px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.582);
+}
+
+.container .inner-card {
+  border: 1px solid rgba(51, 83, 82, 0.315);
+}
+
+.inner-card {
+  padding: 7px;
+  /* border: 2px solid; */
+}
+
+.inner-card .heading {
+  font-weight: 600;
+}
+
+.inner-card button {
+  margin-left: 20px;
+  border-radius: 3px;
+  background: rgba(110, 110, 110, 0.048);
+  height: 20px;
+  width: auto;
+}
+
+.card #delete {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card #delete span {
+  margin: 0px 10px;
+}
+
+
+#delete button {
+  height: 50px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.89);
+  background: rgba(128, 128, 128, 0.212);
+  border: 0;
+}
+
+#delete button:hover {
+  cursor: pointer;
+  background: rgba(128, 128, 128, 0.356);
 }

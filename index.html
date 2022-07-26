@@ -18,10 +18,11 @@
       <h2>Library</h2>
       <p>Keep track of books</p>
     </div>
+
     <div class="header-right position">
       <button>Login</button>
-
     </div>
+
   </div>
 
   <!-- Modal Popup-->
@@ -52,7 +53,7 @@
 
         <div>
           <label for="pages">Pages</label><br>
-          <input id="pages" type="text" placeholder="No. of pages">
+          <input id="pages" type="number" placeholder="No. of pages" minlength="1" min="1">
         </div>
 
         <div>
@@ -71,10 +72,38 @@
     </div>
   </div>
 
-  <!-- Add Book Icon -->
+  <!-- Footer Book Icon -->
   <div class="footer">
     <i class="fa-solid fa-plus" id="open"></i>
     <p class="footer-tooltip">Add new book...</p>
+
+    <!-- Populate books onto the page -->
+    <div class="container">
+      <div class="card">
+
+        <div id="title" class="inner-card">
+          <span class="heading">Title:</span> Harry Potter and the Half blood prince
+        </div>
+        <div id="author" class="inner-card">
+          <span class="heading">Author:</span> J.K. Rowling
+        </div>
+        <div id="read" class="inner-card">
+          <span class="heading">Status:</span>
+          <button> Read </button>
+        </div>
+        <div id="delete" class="inner-card">
+
+          <button>
+            <span class="heading">Delete</span>
+            <span class="delete"><i class="fa-solid fa-trash-can"></i></span>
+          </button>
+        </div>
+
+
+
+      </div>
+
+    </div>
 
   </div>
 
