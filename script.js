@@ -25,3 +25,15 @@ closeBtn.addEventListener("mouseout",() => {
   closeToolTip.style.visibility = "hidden";
   closeToolTip.style.opacity = "0"
 })
+
+// Open and close modal 
+const modal = document.querySelector(".background-modal")
+
+addBook.addEventListener("click",() => {
+  modal.style.visibility = "visible";
+})
+
+closeBtn.addEventListener("click",() => {
+  modal.style.visibility = "hidden";
+})
+
