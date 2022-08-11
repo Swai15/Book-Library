@@ -1,15 +1,22 @@
+:root {
+  --header-height: 100px;
+  background: rgb(241, 241, 233);
+}
+
 * {
   margin: 0;
 }
 
+
+
 .header {
   display: grid;
   grid-template-columns: 7fr 1fr;
-  height: 100px;
+  height: var(--header-height);
   background: rgb(174, 225, 255);
   /* border: 2px solid black; */
 
-  box-shadow: 3px 3px 3px rgb(0, 0, 0);
+  box-shadow: 1px 1px 5px rgba(0, 135, 212, 0.555);
 }
 
 
@@ -62,6 +69,7 @@
 }
 
 
+/* FOOTER START */
 .footer #open {
   position: absolute;
   top: 85vh;
@@ -227,7 +235,7 @@ form .button {
 
 /* MIDDLE SECTION  */
 .container {
-  background: rgb(255, 255, 255);
+  /* background: rgb(110, 94, 94); */
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -241,7 +249,8 @@ form .button {
   border-radius: 3px;
   margin: 20px;
   display: grid;
-  grid-template-rows: repeat(3, 1fr) 70px;
+  grid-template-rows: repeat(5, 1fr);
+
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.582);
 }
 
@@ -258,35 +267,56 @@ form .button {
   font-weight: 600;
 }
 
-.inner-card button {
+/* #read-card button {
   margin-left: 20px;
   border-radius: 3px;
-  background: rgba(110, 110, 110, 0.048);
-  height: 20px;
+  background: rgba(69, 139, 167, 0.322);
+  height: 30px;
   width: auto;
+  border: 0;
+  font-size: 15px;
+  border: 5px black solid;
 }
 
-.card #delete {
-  font-size: 18px;
+#read-card button:hover {
+  cursor: pointer;
+  background: rgba(47, 95, 114, 0.322);
+} */
+
+#read-card {
+  display: grid;
+  grid-template-columns: 50px 100px;
+
+}
+
+
+
+.checkbox {
+  height: 19px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+
+.card #delete-card {
   display: flex;
   justify-content: center;
-
 }
 
-.card #delete span {
+.card #delete-card span {
   margin: 0px 10px;
 }
 
 
-#delete button {
+#delete-card button {
   height: 50px;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.89);
-  background: rgba(128, 128, 128, 0.212);
+  background: rgba(69, 139, 167, 0.322);
   border: 0;
+  border-radius: 4px;
 }
 
-#delete button:hover {
+#delete-card button:hover {
   cursor: pointer;
-  background: rgba(128, 128, 128, 0.356);
+  background: rgba(133, 30, 30, 0.534);
 }

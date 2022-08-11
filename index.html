@@ -65,7 +65,7 @@
         </div>
 
         <div class="button">
-          <button type="button"> Create </button>
+          <button type="button" id="create" class="create"> Create </button>
         </div>
 
       </form>
@@ -79,38 +79,44 @@
 
     <!-- Populate books onto the page -->
     <div class="container">
-      <div class="card">
 
+      <div class="card">
         <div id="title" class="inner-card">
-          <span class="heading">Title:</span> Harry Potter and the Half blood prince
+          <span class="heading">Title:</span> <span class="card-content">Harry Potter and the Half Blood Prince </span>
         </div>
         <div id="author" class="inner-card">
-          <span class="heading">Author:</span> J.K. Rowling
+          <span class="heading">Author:</span> <span class="card-content">J.K. Rowling</span>
         </div>
-        <div id="read" class="inner-card">
-          <span class="heading">Status:</span>
-          <button> Read </button>
+        <div id="pages" class="inner-card">
+          <span class="heading">Pages:</span> <span class="card-content">364</span>
         </div>
-        <div id="delete" class="inner-card">
-
+        <div id="read-card" class="inner-card">
+          <span class="heading">Completed?</span>
+          <input class="checkbox" type="checkbox">
+        </div>
+        <div id="delete-card" class="inner-card button">
           <button>
             <span class="heading">Delete</span>
             <span class="delete"><i class="fa-solid fa-trash-can"></i></span>
           </button>
         </div>
-
-
-
       </div>
 
     </div>
+
+
+
+
+
 
   </div>
 
 
 
 
-  <script src="./script.js"></script>
+  <script src="./script.js">
+
+  </script>
 </body>
 
 </html>
