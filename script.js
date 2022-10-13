@@ -4,7 +4,7 @@ const addBookTip = document.querySelector(".footer-tooltip");
 
 addBook.addEventListener("mouseover",function toolTip() {
   addBookTip.style.visibility = "visible"
-  addBookTip.style.opacity = "1"
+  addBookTip.style.opacity = "0.8"
 })
 
 addBook.addEventListener("mouseout",function toolTipout() {
@@ -38,6 +38,7 @@ closeBtn.addEventListener("click",function closeModal() {
 })
 
 
+
 //TAKE USER INPUT
 const title = document.getElementById("title");
 const author = document.getElementById("author");
@@ -46,11 +47,13 @@ const statuss = document.getElementById("read");
 const checkbox = document.querySelector(".checkbox");
 const createBtn = document.querySelector(".create");
 const container = document.querySelector(".container");
+const deleteCard = document.getElementById("delete");
 let position = 0;
 
 let myLibrary = [
-  { title: "Harry Potter and the Half Blood Prince",author: "J.K. Rowling",pages: 364,status: "checked" }
+  { title: "Harry Potter and the Half Blood Prince",author: "J.K. Rowling",pages: 364,status: "checked",dataKey: position }
 ]
+
 
 
 //ADD INPUT ITEMS TO ARRAY
@@ -62,18 +65,13 @@ function addBookArray() {
 
 
 
-
-
-
-
-
 //POPULATE CARDS WITH INPUT
 createBtn.addEventListener("click",function () {
   modal.style.visibility = "hidden";
   position++;
-  newInfo = { title: title.value,author: author.value,pages: pages.value,status: statuss.value };
-  addBookArray()
 
+  newInfo = { title: title.value,author: author.value,pages: pages.value,status: statuss.value,dataKey: position };
+  addBookArray()
 
   //checkbox completed/!
   let checked = "";
@@ -90,20 +88,18 @@ createBtn.addEventListener("click",function () {
   checkstatus()
 
 
-
   //Create new card
   let newCards = `    
-
       <div class="card">
 
         <div id="title" class="inner-card">
-          <span class="heading">Title:</span> <span class="card-content">${title.value}</span>
+          <span class="heading">Title:</span> <span class="card-content">${myLibrary[position].title}</span>
         </div>
         <div id="author" class="inner-card">
-          <span class="heading">Author:</span> <span class="card-content">${author.value}</span>
+          <span class="heading">Author:</span> <span class="card-content">${myLibrary[position].author}</span>
         </div>
         <div id="pages" class="inner-card">
-          <span class="heading">Pages:</span> <span class="card-content">${pages.value}</span>
+          <span class="heading">Pages:</span> <span class="card-content">${myLibrary[position].pages}</span>
         </div>
         <div id="read-card" class="inner-card">
           <span class="heading">Completed?</span>
@@ -117,20 +113,63 @@ createBtn.addEventListener("click",function () {
         </div>
 
       </div>
-
   `;
-
-
   container.innerHTML += newCards
-
-
   console.log(myLibrary)
+
+  setBackToDefault()
 
 })
 
 
 
-//new card should access info from the array
+// *******FUNCTIONS********
+
+//delete book
+// deleteCard.addEventListener("click",function (e) {
+//   let number = myLibrary[position].dataKey;
+//   console.log(e.target);
+//   myLibrary.splice((number - 1),number)
+// })
+
+// set back to default
+function setBackToDefault() {
+  title.value = '';
+  author.value = '';
+  pages.value = '';
+}
+
+
+
+// Use a data akey identifier.
+// Use the key to delete clicked
+
+
+// Element.parentNode.removeChild
+// Element.setAttribute() then append the child
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -147,27 +186,3 @@ createBtn.addEventListener("click",function () {
 
 
 
-function Book() {
-  // the constructor...
-}
-
-
-//Array to hold the objects, 
-//objects to hold the data,
-//object constructor to make a template for the data
-
-function addBookToLibrary() {
-
-}
-
-// First understand how object constructors work
-// learn how to push and access objects in an array
-
-
-// let books = [
-//   { title: "Harry Potter",author: "J.k Rowling",pages: 365 }
-// ]
-
-// books.push({ title: "Joe Bottom",author: "Nikki French",pages: 56 })
-// console.log(books);
-// console.log(books[0].pages);
