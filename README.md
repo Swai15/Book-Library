@@ -1,13 +1,13 @@
 A basic Library app project from TOP's curriculum
 
-Features:
+**Features:**
 
 • Addition of new books
 • Changing the status to read or unread after book creation
 • You can delete a specific book
 • There's tooltips to guide you on the simple procedure
 
-Experience:
+**Experience:**
 
 • Increased my understanding of DOM manipulation in dynamically creating and deleting the book cards
 • Learnt how to create a modal
